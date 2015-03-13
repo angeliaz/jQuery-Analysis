@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-2.0.3.js"></script>
+</head>
+<body>
+	<script>
+
+		var jQuery = function (selector, context) {
+			var ii = new jQuery.prototype.init();
+			console.log(ii.constructor);
+			return ii;
+		};
+
+		jQuery.prototype = {
+			init: function () {
+				this.age = 18;
+				console.log(this);
+				return this;
+			},
+			age: 20,
+			name: 'yun',
+
+			empty: function () {
+				console.log(this);
+				this.empty1 = 'empty';
+				return this;
+			},
+
+			clone: function () {
+				console.log(this);
+				this.clone1 = 'clone';
+				return this;
+			}
+		};
+
+		jQuery.prototype.init.prototype = jQuery.prototype;
+
+		var a = new jQuery();
+
+	</script>
+</body>
+</html>

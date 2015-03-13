@@ -33,6 +33,8 @@ jQuery.fn.init.prototype = jQuery.fn;
 ## 插件接口
 
 ~~~
+// 用法
+// $.extend 用于扩展自身方法，如$.ajax, $.getJSON等，$.fn.extend则是用于扩展jQuery类，包括方法和对jQuery对象的操作。为了保持jQuery的完整性，我比较 趋向于使用$.fn.extend进行插件开发而尽量少使用$.extend
 // jQuery.extend和jQuery.fn.extend其实是同指向同一方法的不同引用
 // jQuery.extend 对jQuery本身的属性和方法进行了扩展
 // jQuery.fn.extend 对jQuery.fn的属性和方法进行了扩展
